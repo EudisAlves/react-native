@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 import Title from './components/Title';
-import Main from './components/Main';
+import Form from './components/Form';
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Title />
-      <Main />
+      <Form />
     </View>
   );
 }
