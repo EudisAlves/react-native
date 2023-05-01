@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { 
     View, 
     Text, 
-    TextInput, 
+    TextInput,
     TouchableOpacity,
     Vibration, 
 } from "react-native";
@@ -23,7 +23,7 @@ export default function Form() {
         return setImc((weidht/(height*height)).toFixed(2))
     }
 
-    function verificationImc() {
+    function verificationImc() { // verificar se os campos foram preenchidos
         if(imc == null) {
             Vibration.vibrate();
             setErroMessage("Campo obrogatório*")
