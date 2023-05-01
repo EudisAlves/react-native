@@ -19,13 +19,13 @@ const styles = StyleSheet.create({
       padding: 10,
     },
 
-    textLabel: {
+    formLabel: {
       color: "#000000",
       fontSize: 18,
       paddingLeft: 20,
     },
 
-    Input: {
+    input: {
       backgroundColor: "#b7b9b9",
       width: "90%",
       borderRadius: 50,
@@ -47,7 +47,14 @@ const styles = StyleSheet.create({
     textButtonCalc: {
       fontSize: 20,
       color: "#ffffff",
-    }
+    },
+
+    errorMessage: {
+      fontSize: 12,
+      color: "red",
+      fontWeight: "bold",
+      paddingLeft: 20,
+    },
   });
 
   export default styles

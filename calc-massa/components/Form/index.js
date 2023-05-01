@@ -11,9 +11,16 @@ export default function Form() {
     const [messageImc, setMessageImc] = useState("preecha o peso e altura!")
     const [imc, setImc] = useState(null)
     const [TextButton, setTextButton] = useState("Calcular")
+    const [errorMessage, setErroMessage] = useState(null)
 
     function imcCalculator() { // calcular o imc ( altura vezes altura divido pelo peso)
         return setImc((weidht/(height*height)).toFixed(2))
+    }
+
+    function verificationImc() {
+        if(inc == null) {
+            setErroMessage("Campo obrogatório*")
+        }
     }
 
     function validationImc() { // altera a tela dinamicamente
@@ -23,28 +30,33 @@ export default function Form() {
             setWeidgt(null)
             setMessageImc("Seu imc é igual:")
             setTextButton("Calcular novamente!")
+            setErroMessage(null)
             return
         }
+        verificationImc() 
         setImc(null)
         setTextButton("Calcular")
         setMessageImc("preecha o peso e a altura!")
-
+        
     }
-
 
     return(
         <View style={styles.formContext}>
             <View style={styles.form}>
-                <Text style={styles.textLabel}>Altura</Text>
-                <TextInput style={styles.Input}
+                <Text style={styles.formLabel}>Altura</Text>
+                <Text style={styles.errorMessage}>{errorMessage}</Text>
+                <TextInput 
+                style={styles.input}
                 onChangeText={setHeight}
                 value={height}
                 placeholder="Ex: 1.75"
                 keyboardType="numeric"
                 
                 />
-                <Text style={styles.textLabel}>Peso</Text>
-                <TextInput style={styles.Input}
+                <Text style={styles.formLabel}>Peso</Text>
+                <Text style={styles.errorMessage}>{errorMessage}</Text>
+                <TextInput 
+                style={styles.input}
                 onChangeText={setWeidgt}
                 value={weidht}
                 placeholder="Ex: 80.550"
