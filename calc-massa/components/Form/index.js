@@ -6,7 +6,7 @@ import {
     TouchableOpacity,
     Vibration, 
 } from "react-native";
-import ResultImc from "../ResultImc";
+import ResultImc from "../ResultImc/";
 import styles from "./style";
 
 
