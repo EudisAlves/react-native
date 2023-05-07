@@ -2,14 +2,13 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     formContext: {
-      backgroundColor: "#d1f9f9",
       width: "100%",
       height: "100%",
-      padding: 10,
+      botton: 0,
+      backgroundColor: "#d1f9f9",
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
       alignItems: "center",
-      botton: 0,
     },
 
     form: {
