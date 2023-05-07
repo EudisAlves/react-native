@@ -1,12 +1,11 @@
 import React from "react";
-import { StyleSheet } from "react-native";
 import { View, Text, TouchableOpacity, Share } from "react-native";
-import styles from "../Form/style";
+import styles from "./style";
 
 export default function ResultImc(props) {
 
     const onShere = async () => {
-        const result = await Share.share({
+        const resultImc = await Share.share({
            massege:"Meu imc hoje é:" +props.resltImc,
         })
     }
@@ -21,9 +20,11 @@ export default function ResultImc(props) {
                 :
                 <View />
                 }
+            </View >
+            <View style={styles.resultImc}>
+                <Text style={styles.information}>{props.messageResultImc}</Text>
+                <Text style={styles.numberImc}>{props.resultImc}</Text>
             </View>
-            <Text style={styles.TitleResultImc}>{props.messageResultImc}</Text>
-            <Text style={styles.resltImc}>{props.resultImc}</Text>
         </View>
-    )
+    );
 }
