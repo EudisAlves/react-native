@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
       width: "100%",
       height: "100%",
       botton: 0,
-      backgroundColor: "#d1f9f9",
+      backgroundColor: "#888",
       borderTopLeftRadius: 30,
       borderTopRightRadius: 30,
       alignItems: "center",
@@ -26,26 +26,32 @@ const styles = StyleSheet.create({
 
     input: {
       backgroundColor: "#b7b9b9",
+      borderWidth: 1,
+      borderColor: 'black',
       width: "90%",
       borderRadius: 50,
       height: 40,
       margin: 10,
       padding: 9,
     },
+
     buttonCalc: {
       borderRadius: 50,
       backgroundColor: '#ff0042',
+      borderWidth: 2,
+      borderColor: "black",
       width: "60%",
       justifyContent: "center",
       alignItems: "center",
       paddingTop: 15,
       paddingBottom: 15,
       marginLeft: "18%",
+      marginTop: 35,
     },
 
     textButtonCalc: {
       fontSize: 20,
-      color: "#ffffff",
+      color: "#020024",
     },
 
     errorMessage: {
