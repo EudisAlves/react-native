@@ -4,10 +4,12 @@ import styles from "./style";
 
 
 export default function ResultImc(props) {
+
     const onShere = async () => {
         const result = await Share.share({
-           massege:"Meu imc hoje é:" + props.resultImc,
+           message:"Meu imc hoje é:" + props.resultImc,
         });
+
     }
    
     return(
