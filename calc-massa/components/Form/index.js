@@ -43,12 +43,12 @@ export default function Form() {
             setMessageImc("Seu imc é igual:")
             setTextButton("Calcular novamente!")
             setErroMessage(null)
-            return
+        } else {
+            verificationImc() 
+            setImc(null)
+            setTextButton("Calcular")
+            setMessageImc("preecha o peso e a altura!")
         }
-        verificationImc() 
-        setImc(null)
-        setTextButton("Calcular")
-        setMessageImc("preecha o peso e a altura!")
         
     }
 
