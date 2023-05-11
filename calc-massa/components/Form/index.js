@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { 
-    View, 
-    Text, 
+import {
+    View,
+    Text,
     TextInput,
     TouchableOpacity,
     Vibration,
-    Pressable, 
+    Pressable,
     Keyboard,
 } from "react-native";
 import ResultImc from "../ResultImc/";
@@ -44,45 +44,50 @@ export default function Form() {
             setTextButton("Calcular novamente!")
             setErroMessage(null)
         } else {
-            verificationImc() 
+            verificationImc()
             setImc(null)
             setTextButton("Calcular")
             setMessageImc("preecha o peso e a altura!")
         }
-        
+
     }
 
-    return(
-        <Pressable onPress={Keyboard.dismiss} style={styles.formContext}>
-            <View style={styles.form}>
+    return(// a mudança do pressable com o view foi para o resultado ficar no lugar do formulário
+        <View  style={styles.formContext}> 
+            { imc == null ? 
+            <Pressable onPress={Keyboard.dismiss} style={styles.form}>
                 <Text style={styles.formLabel}>Altura</Text>
                 <Text style={styles.errorMessage}>{errorMessage}</Text>
-                <TextInput 
-                style={styles.input}
-                onChangeText={setHeight}
-                value={height}
-                placeholder="Ex: 1.75"
-                keyboardType="numeric"
-                
+                <TextInput
+                    style={styles.input}
+                    onChangeText={setHeight}
+                    value={height}
+                    placeholder="Ex: 1.75"
+                    keyboardType="numeric"
+
                 />
                 <Text style={styles.formLabel}>Peso</Text>
                 <Text style={styles.errorMessage}>{errorMessage}</Text>
-                <TextInput 
-                style={styles.input}
-                onChangeText={setWeidgt}
-                value={weidht}
-                placeholder="Ex: 80.550"
-                keyboardType="numeric"
+                <TextInput
+                    style={styles.input}
+                    onChangeText={setWeidgt}
+                    value={weidht}
+                    placeholder="Ex: 80.550"
+                    keyboardType="numeric"
                 />
                 <TouchableOpacity
-                style={styles.buttonCalc}
+                    style={styles.buttonCalc}
                 onPress={() =>{
-                    validationImc()
-                }}
+                        validationImc()
+                    }}
                 ><Text style={styles.textButtonCalc}>{TextButton}</Text></TouchableOpacity>
-                
+
+            </Pressable>
+            : 
+            <View>
+                <ResultImc messageResultImc={messageImc} resultImc={imc} />
             </View>
-            <ResultImc messageResultImc={messageImc} resultImc={imc} />
-        </Pressable>
+            }
+        </View>
     )
 }
