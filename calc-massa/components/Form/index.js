@@ -23,20 +23,20 @@ export default function Form() {
 
     function imcCalculator() { // calcular o imc ( altura vezes altura divido pelo peso)
 
-        let heightFormat = height.replace(",",".") // essa linha é para corrigir o problema do ios com a falta do ponto final no teclado numérico
+        let heightFormat = height.replace(",", ".") // essa linha é para corrigir o problema do ios com a falta do ponto final no teclado numérico
 
-        return setImc((weidht/(height*height)).toFixed(2))
+        return setImc((weidht / (height * height)).toFixed(2))
     }
 
     function verificationImc() { // verificar se os campos foram preenchidos
-        if(imc == null) {
+        if (imc == null) {
             Vibration.vibrate();
             setErroMessage("Campo obrogatório*")
         }
     }
 
     function validationImc() { // altera a tela dinamicamente
-        if(weidht != null && height != null) {
+        if (weidht != null && height != null) {
             imcCalculator()
             setHeight(null)
             setWeidgt(null)
@@ -52,41 +52,41 @@ export default function Form() {
 
     }
 
-    return(// a mudança do pressable com o view foi para o resultado ficar no lugar do formulário
-        <View  style={styles.formContext}> 
-            { imc == null ? 
-            <Pressable onPress={Keyboard.dismiss} style={styles.form}>
-                <Text style={styles.formLabel}>Altura</Text>
-                <Text style={styles.errorMessage}>{errorMessage}</Text>
-                <TextInput
-                    style={styles.input}
-                    onChangeText={setHeight}
-                    value={height}
-                    placeholder="Ex: 1.75"
-                    keyboardType="numeric"
+    return (// a mudança do pressable com o view foi para o resultado ficar no lugar do formulário
+        <View style={styles.formContext}>
+            {imc == null ?
+                <Pressable onPress={Keyboard.dismiss} style={styles.form}>
+                    <Text style={styles.formLabel}>Altura</Text>
+                    <Text style={styles.errorMessage}>{errorMessage}</Text>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={setHeight}
+                        value={height}
+                        placeholder="Ex: 1.75"
+                        keyboardType="numeric"
 
-                />
-                <Text style={styles.formLabel}>Peso</Text>
-                <Text style={styles.errorMessage}>{errorMessage}</Text>
-                <TextInput
-                    style={styles.input}
-                    onChangeText={setWeidgt}
-                    value={weidht}
-                    placeholder="Ex: 80.550"
-                    keyboardType="numeric"
-                />
-                <TouchableOpacity
-                    style={styles.buttonCalc}
-                onPress={() =>{
-                        validationImc()
-                    }}
-                ><Text style={styles.textButtonCalc}>{TextButton}</Text></TouchableOpacity>
+                    />
+                    <Text style={styles.formLabel}>Peso</Text>
+                    <Text style={styles.errorMessage}>{errorMessage}</Text>
+                    <TextInput
+                        style={styles.input}
+                        onChangeText={setWeidgt}
+                        value={weidht}
+                        placeholder="Ex: 80.550"
+                        keyboardType="numeric"
+                    />
+                    <TouchableOpacity
+                        style={styles.buttonCalc}
+                        onPress={() => {
+                            validationImc()
+                        }}
+                    ><Text style={styles.textButtonCalc}>{TextButton}</Text></TouchableOpacity>
 
-            </Pressable>
-            : 
-            <View>
-                <ResultImc messageResultImc={messageImc} resultImc={imc} />
-            </View>
+                </Pressable>
+                :
+                <View>
+                    <ResultImc messageResultImc={messageImc} resultImc={imc} />
+                </View>
             }
         </View>
     )
