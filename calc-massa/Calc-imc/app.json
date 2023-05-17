@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "calc-massa",
-    "slug": "calc-massa",
+    "name": "Calc-imc",
+    "slug": "Calc-imc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
