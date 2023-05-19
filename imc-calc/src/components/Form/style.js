@@ -1,9 +1,53 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create ({
-    Title: {
-
+    formContext: {
+        width:"100%",
+        height: "100%",
+        bottom: 0,
+        backgroundColor: "#ffffff",
+        borderTopLeftRadius: 30,
+        borderTopRightRadius: 30, 
+        alignItems: "center",
     },
+    form: {
+        width: "100%",
+        height: "auto",
+        marginTop: 30,
+        padding: 10,
+    },
+    formLabel: {
+        color: "#000000",
+        fontSize: 18,
+        paddingLeft: 35,
+    },
+    input: {
+        width: "90%",
+        height: 40,
+        paddingLeft: 35,
+        borderRadius: 50,
+        backgroundColor: "#f0f0f3",
+        borderWidth: 1,
+        borderColor: "black",
+        marginLeft: 18,
+    },
+    button: {
+        borderRadius: 50,
+        borderWidth: 2,
+        borderColor: "#000",
+        backgroundColor: "#ff0044",
+        paddingTop: 15,
+        paddingBottom: 15,
+        marginTop: 25,
+        justifyContent: "center",
+        alignItems: "center",
+        width: "60%",
+        marginLeft: 75
+    },
+    textButton: {
+        color: "#ffffff",
+        fontSize: 20,
+    }
 });
 
 export default styles
