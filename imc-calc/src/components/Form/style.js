@@ -47,6 +47,12 @@ const styles = StyleSheet.create ({
     textButton: {
         color: "#ffffff",
         fontSize: 20,
+    },
+    errorMessage: {
+        fontSize: 18,
+        color: "red",
+        fontWeight: "bold",
+        paddingLeft: 32,
     }
 });
 
