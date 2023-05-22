@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { 
-    View, 
-    Text, 
-    TextInput, 
-    TouchableOpacity, 
+import {
+    View,
+    Text,
+    TextInput,
+    TouchableOpacity,
     Vibration,
     Keyboard,
     Pressable,
-    } from "react-native";
+} from "react-native";
 import ResultImc from "../ResultImc";
 import styles from "./style";
 
@@ -21,8 +21,8 @@ export default function Form() {
     const [errorMessage, setErrorMessage] = useState(null)
 
     function imcCalculator() {//formula para calcular o imc peso dividido pela altura veses altura
-        let heightFormat = height.replace("," , ".")// formatação para o ios que não apresenta . e sim ,
-        return setImc((weight/(heightFormat * heightFormat)).toFixed(2))//formula para calcular imc
+        let heightFormat = height.replace(",", ".")// formatação para o ios que não apresenta . e sim ,
+        return setImc((weight / (heightFormat * heightFormat)).toFixed(2))//formula para calcular imc
     }
 
     function verificationImc() {// aviso de campos obrigatórios
@@ -33,13 +33,13 @@ export default function Form() {
     }
 
     function validationImc() {// função para verificar os campos de preechimentos
-       if (weight != null && height != null) {
-        imcCalculator()
-        setHeight(null)
-        setWeight(null)
-        setMessageImc("seu imc é igual:")
-        setTextButton("Calcular novamente")
-        setErrorMessage(null)
+        if (weight != null && height != null) {
+            imcCalculator()
+            setHeight(null)
+            setWeight(null)
+            setMessageImc("seu imc é igual:")
+            setTextButton("Calcular novamente")
+            setErrorMessage(null)
         } else { // simplificando o código
             verificationImc()
             setImc(null)
@@ -49,11 +49,12 @@ export default function Form() {
     }
 
     return (
-        <Pressable 
-        onPress={Keyboard.dismiss}// função para esconder o teclado 
-        style={styles.formContext}
-        >
-            <View style={styles.form}>
+        <View style={styles.formContext}>
+            {imc == null ?
+            <Pressable 
+                onPress={Keyboard.dismiss}// função para esconder o teclado 
+                style={styles.form}
+            >
                 <Text style={styles.formLabel}>Altura</Text>
                 <Text style={styles.errorMessage}>{errorMessage}</Text>
                 <TextInput
@@ -73,14 +74,23 @@ export default function Form() {
                 keyboardType="numeric"
                 />
                 <TouchableOpacity
-                style={styles.button}
-                onPress = {() => validationImc()}// chamar a função de validação
+                    style={styles.button}
+                    onPress = {() => validationImc()}// chamar a função de validação
                 >
                     <Text style={styles.textButton}>{textButton}</Text>
                 </TouchableOpacity>
+            </Pressable >
+            : 
+            <View style={styles.exhibitionResultImc}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress = {() => validationImc()}// chamar a função de validação
+                >
+                    <Text style={styles.textButton}>{textButton}</Text>
+                </TouchableOpacity>
+                <ResultImc messageResultImc={messageImc} resultImc={imc}/>
             </View>
-            <ResultImc messageResultImc={messageImc} resultImc={imc}/>
-            <View></View>
-        </Pressable>
+            }
+        </View>
     );
 }
