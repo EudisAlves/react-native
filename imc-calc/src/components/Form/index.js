@@ -50,7 +50,7 @@ export default function Form() {
 
     return (
         <View style={styles.formContext}>
-            {imc == null ?
+            {imc == null ? // validação do espaços dos inputs
             <Pressable 
                 onPress={Keyboard.dismiss}// função para esconder o teclado 
                 style={styles.form}
@@ -88,7 +88,7 @@ export default function Form() {
                 >
                     <Text style={styles.textButton}>{textButton}</Text>
                 </TouchableOpacity>
-                <ResultImc messageResultImc={messageImc} resultImc={imc}/>
+                <ResultImc messageResultImc={messageImc} resultImc={imc}/>//aprecer o resultado abaixo do botão calcular
             </View>
             }
         </View>
