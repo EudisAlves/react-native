@@ -21,8 +21,8 @@ export default function Form() {
     const [errorMessage, setErrorMessage] = useState(null)
 
     function imcCalculator() {//formula para calcular o imc peso dividido pela altura veses altura
-        let heightFormat = height.replace("," , ".")
-        return setImc((weight/(heightFormat * heightFormat)).toFixed(2))
+        let heightFormat = height.replace("," , ".")// formatação para o ios que não apresenta . e sim ,
+        return setImc((weight/(heightFormat * heightFormat)).toFixed(2))//formula para calcular imc
     }
 
     function verificationImc() {// aviso de campos obrigatórios
@@ -32,7 +32,7 @@ export default function Form() {
         }
     }
 
-    function validationImc() {
+    function validationImc() {// função para verificar os campos de preechimentos
        if (weight != null && height != null) {
         imcCalculator()
         setHeight(null)
@@ -40,17 +40,17 @@ export default function Form() {
         setMessageImc("seu imc é igual:")
         setTextButton("Calcular novamente")
         setErrorMessage(null)
-        return
-        } 
-       verificationImc()
-       setImc(null)
-       setTextButton("Calcular")
-       setMessageImc("preencha o peso altura!")
+        } else { // simplificando o código
+            verificationImc()
+            setImc(null)
+            setTextButton("Calcular")
+            setMessageImc("preencha o peso altura!")
+        }
     }
 
     return (
         <Pressable 
-        onPress={Keyboard.dismiss}
+        onPress={Keyboard.dismiss}// função para esconder o teclado 
         style={styles.formContext}
         >
             <View style={styles.form}>
@@ -74,7 +74,7 @@ export default function Form() {
                 />
                 <TouchableOpacity
                 style={styles.button}
-                onPress = {() => validationImc()}
+                onPress = {() => validationImc()}// chamar a função de validação
                 >
                     <Text style={styles.textButton}>{textButton}</Text>
                 </TouchableOpacity>
