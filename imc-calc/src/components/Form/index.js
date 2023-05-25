@@ -102,7 +102,7 @@ export default function Form(props) {
                     return (
                         <Text style={styles.resultImcItem}>
                             <Text style={styles.textResultItemList}>
-                                resultado imc =
+                                Meu imc hoje é =
                             </Text>
                             {item.imc}
                         </Text>

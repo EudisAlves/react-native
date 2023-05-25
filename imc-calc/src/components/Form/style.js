@@ -57,7 +57,12 @@ const styles = StyleSheet.create ({
         height: "50%",
     },
     listImcs: {
+        width: 350,
         marginTop: 20,
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: "black",
+        backgroundColor: "#9976"
     },
     resultImcItem: {
         fontSize: 30,
