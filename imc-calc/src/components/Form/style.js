@@ -70,6 +70,7 @@ const styles = StyleSheet.create ({
         height: 50,
         width: "100%",
         paddingRight: 20,
+        textAlign: "center"
     },
     textResultItemList: {
         fontSize: 25,
