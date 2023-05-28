@@ -96,6 +96,7 @@ export default function Form(props) {
                 </View>
             }
             <FlatList
+                //showsVerticalScrollIndicator={false} caso queira esconder a barra lateral no scrow
                 style={styles.listImcs}
                 data={imcList.reverse()}
                 renderItem={({ item }) => {

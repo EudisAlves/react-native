@@ -36,11 +36,12 @@ const styles = StyleSheet.create ({
         backgroundColor: "#ff0044",
         paddingTop: 15,
         paddingBottom: 15,
-        marginTop: 25,
         justifyContent: "center",
         alignItems: "center",
         width: "60%",
-        marginLeft: 75
+        marginTop: 25,
+        marginLeft: 75,
+        marginBottom: 35
     },
     textButton: {
         color: "#ffffff",
@@ -58,7 +59,7 @@ const styles = StyleSheet.create ({
     },
     listImcs: {
         width: 350,
-        marginTop: 20,
+        marginBottom: 15,
         borderRadius: 15,
         borderWidth: 1,
         borderColor: "black",
