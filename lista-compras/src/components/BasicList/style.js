@@ -3,6 +3,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        
       },
       item: {
         flexDirection: 'row',
@@ -27,6 +28,14 @@ const styles = StyleSheet.create({
         backgroundColor: 'lightgray',
         marginVertical: 5,
     },
+
+    button: {
+      width: 50,
+      height: 20,
+      borderWidth: 1,
+      borderColor: 'black',
+      borderRadius: 8,
+    }
 });
 
 export default styles

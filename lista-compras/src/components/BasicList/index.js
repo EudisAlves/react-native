@@ -6,26 +6,38 @@ import styles from './style';
 const ListaCompras = () => {
   const [quantidades, setQuantidades] = useState({});
   const [items, setItems] = useState([
-    { nome: 'Arroz....................', quantidade: '', valor: '' },
-    { nome: 'Feijão...................', quantidade: '', valor: '' },
-    { nome: 'Macarrão..........', quantidade: '', valor: '' },
-    { nome: 'Açucar....................', quantidade: '', valor: '' },
-    { nome: 'Café...............................', quantidade: '', valor: '' },
-    { nome: 'Leite..............................', quantidade: '', valor: '' },
+    { nome: 'Arroz..........................', quantidade: '', valor: '' },
+    { nome: 'Feijão.........................', quantidade: '', valor: '' },
+    { nome: 'Macarrão...................', quantidade: '', valor: '' },
+    { nome: 'Açucar.........................', quantidade: '', valor: '' },
+    { nome: 'Café.............................', quantidade: '', valor: '' },
+    { nome: 'Leite.............................', quantidade: '', valor: '' },
     { nome: 'Sal................................', quantidade: '', valor: '' },
     { nome: 'Oléo...............................', quantidade: '', valor: '' },
     { nome: 'Farinha de mesa..........', quantidade: '', valor: '' },
     { nome: 'Farinha de trigo............', quantidade: '', valor: '' },
-    { nome: 'Ovos..................', quantidade: '', valor: '' },
-    { nome: 'Aguá sanitária..................', quantidade: '', valor: '' },
-    { nome: 'Sabão em pó..................', quantidade: '', valor: '' },
-    { nome: 'Sabonete..................', quantidade: '', valor: '' },
-    { nome: 'Pasta de dente..................', quantidade: '', valor: '' },
+    { nome: 'Ovos.............................', quantidade: '', valor: '' },
+    { nome: 'Aguá sanitária...............', quantidade: '', valor: '' },
+    { nome: 'Sabão em pó................', quantidade: '', valor: '' },
+    { nome: 'Sabonete......................', quantidade: '', valor: '' },
+    { nome: 'Pasta de dente.............', quantidade: '', valor: '' },
     { nome: 'Detergente..................', quantidade: '', valor: '' },
     { nome: 'Desinfetante..................', quantidade: '', valor: '' },
+    { nomeInput: '', quantidade: '', valor: '' }, ,
 
     // Adicione os outros itens aqui
   ]);
+
+  const adicionarItem = () => {
+    if (nomeInput.trim() !== '') {
+      setItems((prevItems) => [
+        ...prevItems,
+        { nomeInput: nomeInput.trim(), quantidade: '', valor: '' },
+      ]);
+      setNomeInput('');
+    }
+  };
+
   const [somaProdutos, setSomaProdutos] = useState(0);
 
   const handleQuantidadeChange = (item, quantidade) => {
@@ -40,6 +52,7 @@ const ListaCompras = () => {
     updatedItems[index].valor = value;
     setItems(updatedItems);
   };
+
 
   const calcularValorTotal = () => {
     let soma = 0;
@@ -58,6 +71,17 @@ const ListaCompras = () => {
           <Text>{item.nome}</Text>
           <TextInput
             style={styles.input}
+            placeholder="Nome"
+            value={item.nomeInput}
+            onChangeText={(value) => {
+              const updatedItems = [...items];
+              updatedItems[index].nomeInput = value;
+              setItems(updatedItems);
+            }}
+          />
+
+          <TextInput
+            style={styles.input}
             placeholder="Quantidade"
             value={quantidades[item.nome]}
             onChangeText={(value) => handleQuantidadeChange(item.nome, value)}
@@ -72,8 +96,19 @@ const ListaCompras = () => {
           />
         </View>
       ))}
-      <Button title="Calcular" onPress={calcularValorTotal} />
+      <Button
+        style={styles.button}
+        title="Calcular"
+        onPress={calcularValorTotal} />
+      
+      
+
       <Text style={styles.somaProdutos}>Soma dos Produtos: R$ {somaProdutos.toFixed(2)}</Text>
+      <Button
+        style={styles.button}
+        title="Adicionar Item"
+        onPress={adicionarItem}
+      />
     </ScrollView>
   );
 };
