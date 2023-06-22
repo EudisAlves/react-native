@@ -1,7 +1,8 @@
 
 import { StyleSheet, View } from 'react-native';
 import Title from './src/components/Title';
-import ListaCompras from './src/components/BasicList';
+import ListaCompras from './src/components/ProductList';
+
 
 export default function App() {
   return (
