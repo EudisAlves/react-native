@@ -5,9 +5,17 @@ import AddItemForm from './AddItemForm';
 
 const ProductList = () => {
   const [productList, setProductList] = useState([
-    { id: 1, name: 'Produto 1', quantity: '', value: '' },
-    { id: 2, name: 'Produto 2', quantity: '', value: '' },
-    { id: 3, name: 'Produto 3', quantity: '', value: '' },
+    { id: 1, name: 'Arroz', quantity: '', value: '' },
+    { id: 2, name: 'Feijão', quantity: '', value: '' },
+    { id: 3, name: 'Açucar', quantity: '', value: '' },
+    { id: 4, name: 'Café', quantity: '', value: '' },
+    { id: 5, name: 'Leite', quantity: '', value: '' },
+    { id: 6, name: 'Óleo', quantity: '', value: '' },
+    { id: 7, name: 'Detergente', quantity: '', value: '' },
+    { id: 8, name: 'Pasta de dente', quantity: '', value: '' },
+    { id: 9, name: 'Sabonete', quantity: '', value: '' },
+    { id: 10, name: 'Água sanitária', quantity: '', value: '' },
+    { id: 11, name: 'Sabão em pó', quantity: '', value: '' },
   ]);
 
   const calculateTotal = () => {

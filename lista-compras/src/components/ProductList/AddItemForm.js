@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, Button } from 'react-native';
 import styles from './ProductListStyles'
 
 const AddItemForm = ({ onAddItem }) => {
@@ -21,6 +21,7 @@ const AddItemForm = ({ onAddItem }) => {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.texto}>Adicionar item</Text>
       <View style={styles.inputsContainer}>
       <TextInput
         style={styles.input}
@@ -28,8 +29,6 @@ const AddItemForm = ({ onAddItem }) => {
         value={name}
         onChangeText={setName}
       />
-      
-
       </View>
       <View style={styles.buttonContainer}>
         <Button

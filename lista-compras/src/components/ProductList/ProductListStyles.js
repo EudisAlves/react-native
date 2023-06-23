@@ -8,6 +8,12 @@ const ProductListStyles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
+    texto: {
+        marginBottom: 40,
+        fontSize: 20,
+        padding: 10, 
+        borderTopWidth: 3,
+    },
     input: {
         height: 40,
         width: 90,
@@ -28,8 +34,10 @@ const ProductListStyles = StyleSheet.create({
     buttonContainer: {
         width: 190,
         marginTop: 50, 
-        borderRadius: 10,
-        overflow: 'hidden', 
+        borderRadius: 15,
+        borderWidth: 2,
+        borderColor: 'black', 
+        overflow: 'hidden',
       },
 });
 

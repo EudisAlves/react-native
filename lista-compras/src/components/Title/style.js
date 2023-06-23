@@ -6,8 +6,8 @@ const styles = StyleSheet.create ({
         justifyContent: "center",
         paddingTop: 25,
         paddingBottom: 30,
-
-
+        borderBottomWidth: 3,
+        borderBottomColor: 'black',
     },
     textTitle: {
         color: "#000000",
