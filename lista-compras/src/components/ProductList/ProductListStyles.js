@@ -13,6 +13,7 @@ const ProductListStyles = StyleSheet.create({
         fontSize: 20,
         padding: 10, 
         borderTopWidth: 3,
+        borderTopColor: '#2a7efd',
     },
     input: {
         height: 40,
@@ -36,7 +37,7 @@ const ProductListStyles = StyleSheet.create({
         marginTop: 50, 
         borderRadius: 15,
         borderWidth: 2,
-        borderColor: 'black', 
+        borderColor: '#000', 
         overflow: 'hidden',
       },
 });

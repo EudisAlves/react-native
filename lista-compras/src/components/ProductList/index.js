@@ -10,12 +10,14 @@ const ProductList = () => {
     { id: 3, name: 'Açucar', quantity: '', value: '' },
     { id: 4, name: 'Café', quantity: '', value: '' },
     { id: 5, name: 'Leite', quantity: '', value: '' },
+    { id: 13, name: 'Farinha de trigo', quantity: '', value: '' },
     { id: 6, name: 'Óleo', quantity: '', value: '' },
     { id: 7, name: 'Detergente', quantity: '', value: '' },
     { id: 8, name: 'Pasta de dente', quantity: '', value: '' },
     { id: 9, name: 'Sabonete', quantity: '', value: '' },
     { id: 10, name: 'Água sanitária', quantity: '', value: '' },
     { id: 11, name: 'Sabão em pó', quantity: '', value: '' },
+    { id: 12, name: 'Desinfetante', quantity: '', value: '' },
   ]);
 
   const calculateTotal = () => {

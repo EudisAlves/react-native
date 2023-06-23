@@ -7,10 +7,11 @@ const styles = StyleSheet.create ({
         paddingTop: 25,
         paddingBottom: 30,
         borderBottomWidth: 3,
-        borderBottomColor: 'black',
+        borderBottomColor: '#2a7efd',
     },
     textTitle: {
         color: "#000000",
+        fontFamily: 'Dancing Script',
         fontSize: 24,
         fontWeight: "bold",
     }

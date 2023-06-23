@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   productName: {
     marginLeft: 10,
-    color:'#e3e'
+    color:'#424141'
   },
   inputsContainer: {
     flex: 1,
@@ -33,10 +33,10 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     marginLeft: 10,
     paddingHorizontal: 9,
-    backgroundColor: '#ffff'
+    backgroundColor: '#c3dbff'
   },
   totalText: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
     marginTop: 10,
   },
