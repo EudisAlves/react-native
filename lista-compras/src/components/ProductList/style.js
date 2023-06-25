@@ -33,12 +33,13 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     marginLeft: 10,
     paddingHorizontal: 9,
-    backgroundColor: '#c3dbff'
+    backgroundColor: '#ffffff'
   },
   totalText: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontFamily: 'inter-Black',
     marginTop: 10,
+
   },
   scrollView: {
     flex: 1,

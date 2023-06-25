@@ -5,14 +5,14 @@ const styles = StyleSheet.create ({
         alignItems: "center",
         justifyContent: "center",
         paddingTop: 25,
-        paddingBottom: 30,
+        paddingBottom: 5,
         borderBottomWidth: 3,
         borderBottomColor: '#2a7efd',
     },
     textTitle: {
         color: "#000000",
-        fontSize: 24,
-        fontWeight: "bold",
+        fontSize: 34,
+        fontFamily: 'Inter-black',
     }
 });
 

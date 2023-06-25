@@ -11,6 +11,7 @@ const ProductListStyles = StyleSheet.create({
     texto: {
         marginBottom: 40,
         fontSize: 20,
+        fontFamily: 'Inter-Black',
         padding: 10, 
         borderTopWidth: 3,
         borderTopColor: '#2a7efd',
@@ -23,18 +24,17 @@ const ProductListStyles = StyleSheet.create({
         borderColor: '#555555',
         marginLeft: 10,
         paddingHorizontal: 9,
-        margin: 10,
         backgroundColor: '#fff'
     },
     totalText: {
         fontSize: 18,
-        fontWeight: 'bold',
+        fontFamily: 'Inter-Black',
         marginTop: 10,
     },
 
     buttonContainer: {
         width: 190,
-        marginTop: 50, 
+        marginTop: 35, 
         borderRadius: 15,
         borderWidth: 2,
         borderColor: '#000', 
