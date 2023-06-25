@@ -72,7 +72,7 @@ const ProductList = () => {
             <View style={styles.productNameContainer}>
               <Text style={styles.productName}>{product.name}</Text>
             </View>
-            <View style={styles.inputsContainer}>
+            <ScrollView style={styles.inputsContainer}>
               <TextInput
                 style={styles.input}
                 placeholder="Quantidade"
@@ -91,7 +91,7 @@ const ProductList = () => {
                 onChangeText={(text) => updateProductValue(product.id, text)}
                 onFocus={() => clearInput(product.id, 'value')}
               />
-            </View>
+            </ScrollView>
           </View>
         ))}
       </ScrollView>

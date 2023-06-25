@@ -11,7 +11,6 @@ const styles = StyleSheet.create ({
     },
     textTitle: {
         color: "#000000",
-        fontFamily: 'Dancing Script',
         fontSize: 24,
         fontWeight: "bold",
     }
