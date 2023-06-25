@@ -66,13 +66,12 @@ const ProductList = () => {
 
   return (
     <View style={styles.container}>
-      <ScrollView>
+      <ScrollView style={styles.scrollView}>
         {productList.map((product) => (
           <View key={product.id} style={styles.productContainer}>
             <View style={styles.productNameContainer}>
               <Text style={styles.productName}>{product.name}</Text>
             </View>
-            <ScrollView style={styles.inputsContainer}>
               <TextInput
                 style={styles.input}
                 placeholder="Quantidade"
@@ -91,7 +90,6 @@ const ProductList = () => {
                 onChangeText={(text) => updateProductValue(product.id, text)}
                 onFocus={() => clearInput(product.id, 'value')}
               />
-            </ScrollView>
           </View>
         ))}
       </ScrollView>

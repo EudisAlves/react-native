@@ -40,6 +40,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 10,
   },
+  scrollView: {
+    flex: 1,
+    marginBottom: 10, // opcional, se desejar adicionar uma margem inferior ao ScrollView
+  },
 });
 
 export default styles;
