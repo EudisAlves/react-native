@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   },
   totalText: {
     fontSize: 22,
-    fontFamily: 'inter-Black',
     marginTop: 10,
 
   },

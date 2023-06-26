@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, ScrollView } from 'react-native';
 import styles from './style';
 import AddItemForm from './AddItemForm';
-import { useFonts } from 'expo-font';
 
 const ProductList = () => {
   const [productList, setProductList] = useState([
@@ -56,9 +55,6 @@ const ProductList = () => {
       )
     );
   };
-  const [fontsLoaded] = useFonts({
-    'Inter-Black': require('../../../assets/fonts/DancingScript-Bold.ttf'),
-  });
 
   const addItem = (newItem) => {
     const newId = Math.max(...productList.map((product) => product.id)) + 1;

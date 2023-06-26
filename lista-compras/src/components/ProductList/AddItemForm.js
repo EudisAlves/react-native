@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
 import styles from './ProductListStyles'
-import { useFonts } from 'expo-font';
 
 const AddItemForm = ({ onAddItem }) => {
   const [name, setName] = useState('');
@@ -19,9 +18,6 @@ const AddItemForm = ({ onAddItem }) => {
     setQuantity('');
     setValue('');
   };
-  const [fontsLoaded] = useFonts({
-    'Inter-Black': require('../../../assets/fonts/DancingScript-Bold.ttf'),
-  });
 
   return (
     <View style={styles.container}>

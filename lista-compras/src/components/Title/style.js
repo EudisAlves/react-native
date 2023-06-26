@@ -12,7 +12,6 @@ const styles = StyleSheet.create ({
     textTitle: {
         color: "#000000",
         fontSize: 34,
-        fontFamily: 'Inter-black',
     }
 });
 
