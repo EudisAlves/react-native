@@ -11,7 +11,6 @@ const ProductListStyles = StyleSheet.create({
     texto: {
         marginBottom: 40,
         fontSize: 20,
-        fontFamily: 'Inter-Black',
         padding: 10, 
         borderTopWidth: 3,
         borderTopColor: '#2a7efd',
