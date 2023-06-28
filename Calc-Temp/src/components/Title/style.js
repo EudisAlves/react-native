@@ -3,12 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
 
     text: {
-        color: '#000000',
+        color: '#fff',
         fontSize: 25,
         marginTop: 60,
         textAlign: 'center',
-        backgroundColor: '#3e3e',
+        backgroundColor: '#ff0000',
         padding: 20,
+        margin: 10,
+        borderRadius: 5,
+        borderWidth: 1,
     }
     
 });
