@@ -2,26 +2,30 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     informacion: {
-      flexDirection: 'row',
-      alignContent: 'center',
-      backgroundColor: '#000',
-      margin: 20,
-      borderRadius: 15,
-      borderWidth: 1,
-      borderColor: '#fd0606',
-      height: 100,
-      padding: 10
+        alignContent: 'center',
+        backgroundColor: '#000',
+        margin: 8,
+        borderRadius: 15,
+        borderWidth: 1,
+        borderColor: '#fd0606',
+        height: 150,
+        padding: 20,
     },
     text: {
         fontSize: 14,
         color:'#fff',
-        marginLeft: 80,
+        marginLeft: 8,
+        margin: 20,
     },
     label: {
         marginRight: 10,
         marginTop: 15,
         color:'#fff',
     },
+    inputInfo: {
+        flexDirection: 'row',
+    },
+
     input: {
         color: '#fff',
         margin: 7,
@@ -29,18 +33,18 @@ const styles = StyleSheet.create({
         backgroundColor: '#c1c1c1',
         borderRadius: 15,
         padding: 6,
-        width: 130,
-        height: 40,
-        flex: 1,
+        width: 150,
+        height: 30,
+        textAlign: 'center',
     },
     buttonContainer: {
-        width: 190,
-        marginTop: 15, 
+        width: 120,
+        marginTop: 5, 
         borderRadius: 15,
         borderWidth: 2,
         borderColor: '#ff3555', 
         overflow: 'hidden',
-        marginLeft: 100,
+        marginLeft: 130,
         shadowColor:'#fff'
       },
 
