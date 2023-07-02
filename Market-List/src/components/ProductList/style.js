@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    paddingVertical: 20,
+    paddingVertical: 11,
     paddingHorizontal: 10,
   },
   
@@ -38,11 +38,12 @@ const styles = StyleSheet.create({
   totalText: {
     fontSize: 22,
     marginTop: 10,
+    marginBottom: 5,
 
   },
   scrollView: {
     flex: 1,
-    marginBottom: 10, // opcional, se desejar adicionar uma margem inferior ao ScrollView
+    marginBottom: 5, // opcional, se desejar adicionar uma margem inferior ao ScrollView
   },
 });
 

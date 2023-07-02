@@ -10,8 +10,9 @@ const styles = StyleSheet.create ({
         borderBottomColor: '#2a7efd',
     },
     textTitle: {
-        color: "#000000",
+        color: "#444",
         fontSize: 34,
+        fontWeight: 700,
     }
 });
 

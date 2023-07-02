@@ -8,10 +8,16 @@ const ProductListStyles = StyleSheet.create({
         justifyContent: 'flex-start',
         alignItems: 'center',
     },
+    aviso:{
+        marginLeft: 5,
+        fontSize: 11,
+        color:'red',
+    },
+
     texto: {
-        marginBottom: 40,
+        marginBottom: 5,
         fontSize: 20,
-        padding: 10, 
+        padding: 6, 
         borderTopWidth: 3,
         borderTopColor: '#2a7efd',
     },
@@ -28,12 +34,11 @@ const ProductListStyles = StyleSheet.create({
     totalText: {
         fontSize: 18,
         fontFamily: 'Inter-Black',
-        marginTop: 10,
     },
 
     buttonContainer: {
         width: 190,
-        marginTop: 35, 
+        marginTop: 15, 
         borderRadius: 15,
         borderWidth: 2,
         borderColor: '#000', 
