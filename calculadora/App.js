@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 25,
-    marginTop: -100,
+    marginTop: 60,
     marginBottom: 20,
     color: '#fff',
     padding: 15,
@@ -99,7 +99,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     padding: 10,
     color: '#fff',
-    backgroundColor: '#f33'
   },
 });
 

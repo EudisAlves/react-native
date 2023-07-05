@@ -12,7 +12,7 @@ export default class index extends Component {
   render() {
     return (
       <View style={styles.resultbox} >
-        <Text></Text>
+        <Text> index </Text>
       </View>
     );
   }
