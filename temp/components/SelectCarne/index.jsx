@@ -1,6 +1,25 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, TextInput } from 'react-native';
 import styles from '../SelectCarne/style';
+import ShareMenu from 'react-native-share-menu';
+
+const handleShare = async () => {
+  const textoCompartilhamento = `Resultado dos temperos para ${selectedOption} (${pesoCarne} kg):\n`
+    + `Tempero: ${quantidadeTempero}g\n`
+    + `Colorau: ${quantidadeColorau}g\n`
+    + `Alho: ${quantidadeAlho}g\n`
+    + `Óleo: ${quantidadeOleo}g\n`
+    + `Limões: ${quantidadeLimao}\n`
+    + `Louro: ${quantidadeLouro}g`;
+
+  try {
+    await ShareMenu.shareSingle({
+      message: textoCompartilhamento,
+    });
+  } catch (error) {
+    console.log('Error sharing:', error);
+  }
+};
 
 const SelectCarne = () => {
   const [selectedOption, setSelectedOption] = useState('');
@@ -22,11 +41,15 @@ const SelectCarne = () => {
     calcularQuantidades(text, selectedOption);
   };
 
+
+
+
+
   const calcularQuantidades = (peso, option) => {
     if (option === 'Frango') {
-      const quantidadeTempero = (35 * parseFloat(peso)).toFixed(2);
-      const quantidadeColorau = (8 * parseFloat(peso)).toFixed(2);
-      const quantidadeAlho = (15 * parseFloat(peso)).toFixed(2);
+      const quantidadeTempero = (35 * parseFloat(peso)).toFixed(0);
+      const quantidadeColorau = (8 * parseFloat(peso)).toFixed(0);
+      const quantidadeAlho = (15 * parseFloat(peso)).toFixed(0);
 
       setQuantidadeTempero(quantidadeTempero);
       setQuantidadeColorau(quantidadeColorau);
@@ -35,9 +58,9 @@ const SelectCarne = () => {
       setQuantidadeLimao('');
       setQuantidadeLouro('');
     } else if (option === 'Bovina') {
-      const quantidadeTempero = (60 * parseFloat(peso)).toFixed(2);
-      const quantidadeAlho = (25 * parseFloat(peso)).toFixed(2);
-      const quantidadeOleo = (4 * parseFloat(peso)).toFixed(2);
+      const quantidadeTempero = (60 * parseFloat(peso)).toFixed(0);
+      const quantidadeAlho = (25 * parseFloat(peso)).toFixed(0);
+      const quantidadeOleo = (4 * parseFloat(peso)).toFixed(0);
 
       setQuantidadeTempero(quantidadeTempero);
       setQuantidadeColorau('');
@@ -46,11 +69,11 @@ const SelectCarne = () => {
       setQuantidadeLimao('');
       setQuantidadeLouro('');
     } else if (option === 'Suína') {
-      const quantidadeTempero = (35 * parseFloat(peso)).toFixed(2);
-      const quantidadeLimao = (2 * parseFloat(peso)).toFixed(2);
-      const quantidadeAlho = (20 * parseFloat(peso)).toFixed(2);
-      const quantidadeLouro = (1 * parseFloat(peso)).toFixed(2);
-      const quantidadeColorau = (8 * parseFloat(peso)).toFixed(2);
+      const quantidadeTempero = (35 * parseFloat(peso)).toFixed(0);
+      const quantidadeLimao = (2 * parseFloat(peso)).toFixed(0);
+      const quantidadeAlho = (20 * parseFloat(peso)).toFixed(0);
+      const quantidadeLouro = (1 * parseFloat(peso)).toFixed(0);
+      const quantidadeColorau = (8 * parseFloat(peso)).toFixed(0);
 
       setQuantidadeTempero(quantidadeTempero);
       setQuantidadeColorau(quantidadeColorau);
@@ -59,8 +82,8 @@ const SelectCarne = () => {
       setQuantidadeLimao(quantidadeLimao);
       setQuantidadeLouro(quantidadeLouro);
     } else if (option === 'Coração') {
-      const quantidadeTempero = (35 * parseFloat(peso)).toFixed(2);
-      const quantidadeAlho = (15 * parseFloat(peso)).toFixed(2);
+      const quantidadeTempero = (35 * parseFloat(peso)).toFixed(0);
+      const quantidadeAlho = (15 * parseFloat(peso)).toFixed(0);
 
       setQuantidadeTempero(quantidadeTempero);
       setQuantidadeColorau('');
@@ -93,8 +116,8 @@ const SelectCarne = () => {
 
         <TouchableOpacity
           style={[styles.tipoCarne,
-            selectedOption === 'Suína' && styles.selectedOption,
-        ]}
+          selectedOption === 'Suína' && styles.selectedOption,
+          ]}
           onPress={() => handleOptionSelect('Suína')}
         >
           <Text style={{ fontSize: 20, marginVertical: 10 }}>Suína</Text>
@@ -104,8 +127,8 @@ const SelectCarne = () => {
       <View style={styles.carne}>
         <TouchableOpacity
           style={[styles.tipoCarne,
-            selectedOption === 'Frango' && styles.selectedOption,
-        ]}
+          selectedOption === 'Frango' && styles.selectedOption,
+          ]}
           onPress={() => handleOptionSelect('Frango')}
         >
           <Text style={{ fontSize: 20, marginVertical: 10 }}>Frango</Text>
@@ -113,12 +136,12 @@ const SelectCarne = () => {
 
         <TouchableOpacity
           style={[styles.tipoCarne,
-            selectedOption === 'Coração' && styles.selectedOption,
-        ]}
+          selectedOption === 'Coração' && styles.selectedOption,
+          ]}
           onPress={() => handleOptionSelect('Coração')}
         >
           <Text style={{ fontSize: 20, marginVertical: 10 }}>Coração</Text>
-         </TouchableOpacity>
+        </TouchableOpacity>
       </View>
 
       <Text style={styles.text}>Peso da carne (em kg):</Text>
@@ -159,6 +182,13 @@ const SelectCarne = () => {
           )}
         </View>
       )}
+
+      <TouchableOpacity
+        style={styles.botaoCompartilhar}
+        onPress={handleShare}
+      >
+        <Text style={styles.textoBotaoCompartilhar}>Compartilhar</Text>
+      </TouchableOpacity>
     </View>
   );
 };

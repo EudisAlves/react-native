@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 20,
         fontWeight: 400,
-        color: '#fff',
+        color: '#240202',
         padding: 10,
     },
     carne: {
@@ -19,14 +19,16 @@ const styles = StyleSheet.create({
         padding: 5,
     },
     tipoCarne: {
-        margin: 5,
+        margin: 10,
     },
     tipoCarne2: {
-        margin: 5,
+        margin: 10,
     },
     input: {
         backgroundColor: '#fff',
-        width: 90,
+        width: 60,
+        padding: 5,
+        borderRadius: 10,
     },
     selectedOption: {
         backgroundColor: 'yellow',
@@ -35,6 +37,24 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         padding:5,
       },
+    temperoContainer: {
+        backgroundColor: '#fff',
+        padding: 15,
+        margin: 15,
+        borderRadius: 20,
+      },
+      botaoCompartilhar: {
+        backgroundColor: '#fa0303',
+        borderWidth: 2,
+        borderColor: '#fff',
+        borderRadius:10,
+        padding: 5,
+        margin: 10,
+    },
+    textoBotaoCompartilhar: {
+        color: '#fff',
+
+      }  
   });
 
 export default styles;
