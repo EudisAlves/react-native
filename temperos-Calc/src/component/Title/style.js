@@ -6,7 +6,10 @@ const styles = StyleSheet.create({
         height: 110,
     },
     text: {
-        color: '#fff'
+        color: '#fff',
+        marginLeft: 140,
+        marginTop: 50,
+        fontSize: 25,
     }
 });
 export default styles
