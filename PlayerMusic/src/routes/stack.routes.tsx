@@ -13,11 +13,21 @@ export function StackRoutes() {
 
             <Screen
                 name='Loading'
+                options={{//para esconder o nome do componente
+                    headerShown: false,
+                }}
                 component={Loading}
             />
 
             <Screen
-                name="Home"
+                name='Home'
+                options={{
+                    title: 'Home Screen',
+                    headerStyle: {
+                        backgroundColor: 'navy'
+                    },
+                    headerTintColor: '#fff'
+                }}
                 component={Home}
             />
             
