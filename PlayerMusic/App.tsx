@@ -1,17 +1,10 @@
 
-import { StyleSheet, View } from 'react-native';
-import { Home } from './src/screens/home/Home';
+
+import { Routes } from './src/routes';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Home />
-    </View>
+      <Routes />
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
