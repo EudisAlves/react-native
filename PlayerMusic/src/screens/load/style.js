@@ -2,8 +2,15 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
     container: {
-      backgroundColor: '#22e'
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#22e',
     },
+
+    text: {
+      color: '#ffffff'
+    }
   });
 
 export default styles;

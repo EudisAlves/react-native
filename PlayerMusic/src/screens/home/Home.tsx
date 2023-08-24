@@ -1,12 +1,17 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 
 import styles from './style';
 
 export function Home() {
+
+  function openScreen() {
+
+  }
+
   return (
     <View style={styles.screen}>
-      <Text>Home Screen</Text>
+      <Text>Home</Text>
     </View>
   );
 }

@@ -10,15 +10,17 @@ import { Loading } from '../screens/load/Loading';
 export function StackRoutes() {
     return (
         <Navigator>
-            <Screen
-                name="Home"
-                component={Home}
-            />
 
             <Screen
                 name='Loading'
                 component={Loading}
             />
+
+            <Screen
+                name="Home"
+                component={Home}
+            />
+            
         </Navigator>
     )
 }
