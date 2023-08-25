@@ -3,7 +3,7 @@ import React from 'react';
 
 const { Screen, Navigator} = createNativeStackNavigator();
 
-import { Home } from '../screens/home/Home';
+import { Home } from '../screens/homescreens/Home';
 import { Loading } from '../screens/load/Loading';
 
 
