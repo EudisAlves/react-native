@@ -29,7 +29,7 @@ const ProductList = () => {
         total += quantity * value;
       }
     });
-    return total;
+    return total.toFixed(2);
   };
 
   const updateProductQuantity = (id, quantity) => {
@@ -72,24 +72,29 @@ const ProductList = () => {
             <View style={styles.productNameContainer}>
               <Text style={styles.productName}>{product.name}</Text>
             </View>
-              <TextInput
-                style={styles.input}
-                placeholder="Quantidade"
-                keyboardType="numeric"
-                value={product.quantity}
-                onChangeText={(text) =>
-                  updateProductQuantity(product.id, text)
-                }
-                onFocus={() => clearInput(product.id, 'quantity')}
-              />
-              <TextInput
-                style={styles.input}
-                placeholder="Valor"
-                keyboardType="numeric"
-                value={product.value}
-                onChangeText={(text) => updateProductValue(product.id, text)}
-                onFocus={() => clearInput(product.id, 'value')}
-              />
+            <TextInput
+              style={styles.input}
+              placeholder="Quantidade"
+              keyboardType="numeric"
+              value={product.quantity}
+              onChangeText={(text) => {
+                const sanitizedText = text.replace(',', '.');
+                updateProductQuantity(product.id, text)
+              }}
+              onFocus={() => clearInput(product.id, 'quantity')}
+            />
+            <TextInput
+              style={styles.input}
+              placeholder="Valor"
+              keyboardType="numeric"
+              value={product.value}
+              onChangeText={(text) => {
+                // Substituir vírgulas por pontos automaticamente
+                const sanitizedText = text.replace(',', '.');
+                updateProductValue(product.id, sanitizedText);
+              }}
+              onFocus={() => clearInput(product.id, 'value')}
+            />
           </View>
         ))}
       </ScrollView>

@@ -34,7 +34,7 @@ const AddItemForm = ({ onAddItem }) => {
         <Button
           title="Adicionar"
           onPress={handleAddItem}
-          color="#007AFF" // Cor personalizada do botão
+          color="#007CF8" // Cor personalizada do botão
         />
       </View>
     </View>

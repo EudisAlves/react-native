@@ -13,14 +13,14 @@ const ProductListStyles = StyleSheet.create({
         fontSize: 20,
         padding: 10, 
         borderTopWidth: 3,
-        borderTopColor: '#2a7efd',
+        borderTopColor: '#020914',
     },
     input: {
         height: 40,
         width: 90,
         borderWidth: 1,
         borderRadius: 15,
-        borderColor: '#555555',
+        borderColor: '#FD7005',
         marginLeft: 10,
         paddingHorizontal: 9,
         backgroundColor: '#fff'

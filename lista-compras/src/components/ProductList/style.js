@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
   },
   productName: {
     marginLeft: 10,
-    color:'#424141'
+    color:'#F9F7F7'
   },
   inputsContainer: {
     flex: 1,

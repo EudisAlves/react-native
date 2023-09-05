@@ -7,7 +7,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 export default function App() {
   return (
     <LinearGradient
-      colors={['#81ffe9', '#ffe5e5']}
+      colors={['#FC0404', '#FFD278']}
       style={styles.container}
     >
       <View style={styles.content}>
@@ -21,10 +21,11 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 0,
   },
   content: {
     flex: 1,
     backgroundColor: 'transparent',
-    padding: 20,
+    padding: 15,
   },
 });
