@@ -15,13 +15,32 @@
     <h3>Escolha o prato</h3>
     
     <form>
-      <label for=""></label>
+      
+      <label for="tipo-prato">Qual prato vamos preparar?</label>
+
+      <select name="tipo-prato" id="tipo-prato">
+        <option value="arroz-branco">Arroz branco</option>
+        <option value="arroz-grega">Arroz a la grega</option>
+        <option value="feijao-trop">Feijão topeiro</option>
+        <option value="salpicao">Salpicão</option>
+        <option value="maionese">Maionese</option>
+        <option value="farofa">Farofa</option>
+      </select><br>
+      
+      <label for="peso-prato">Peso do prato</label>
+      <input type="number" id="peso-prato" name="peso-prato"><br>
+
+      <button type="button" onclick="exibirResultado()" id="btn">Imgredientes</button>
+    
     </form>
 
-    <ul>
-      <li><input type="number"></li>
-      
-    </ul>
+    <div id="resultado"></div>
+    <button type="button" onclick="compartilharTemperos" id="btn-comp">Compartilhar</button>
+
+    <div id="version">
+      <h4>Versão: 1.0</h4>
+    </div>
+
   </main>
 </body>
 </html>
