@@ -17,20 +17,33 @@ body {
 }
 
 #image {
-  width: 180px;
-  height: 200px;
+  width: 140px;
+  height: 160px;
 }
 
 .prato {
   margin: 15px;
+  font-size: larger;
+  color: bisque;
+}
+
+.peso {
+  margin: 15px;
+  font-size: larger;
+  color: bisque;
 }
 
 #tipo-prato {
   margin: 25px;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 #peso-prato {
   margin: 25px;
+  padding: 5px;
+  border-radius: 10px;
+  width: 70px;
 }
 
 #peso-carne {
@@ -46,7 +59,7 @@ body {
 }
 
 #btn {
-  margin: 25px;
+  margin: 10px;
   width: 100px;
   height: 40px;
   border-radius: 5px;
@@ -56,27 +69,33 @@ body {
 }
 
 #btn-comp {
-  font-size: larger;
-  padding: 10px;
-  margin: 30px;
+  font-size: 13px;
+  padding: 5px;
+  margin: 10px;
   border-radius: 5px;
   color: rgb(13, 14, 13);
   background: rgb(235, 102, 102);
 }
 
 #resultado {
-  padding: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgb(255, 253, 253);
-  font-size: 28px;
+  color: rgb(71, 41, 41);
+  font-size: 18px;
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  width: 300px;
+  background-color: rgb(247, 241, 234);
+  align-items: center;
+  justify-content: center;
+  margin-left: 70px;
+  border-radius: 10px;
 }
 
 #version {
   margin-top: 20px;
   margin-left: -200px;
-  color: rgb(10, 0, 0);
+  color: rgb(243, 5, 5);
   font-weight: 300;
 }

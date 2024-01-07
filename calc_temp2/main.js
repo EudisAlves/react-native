@@ -7,18 +7,18 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Alho: pesoPrato * 0.010,
       Ajisal: pesoPrato * 0.025,
       Oleó: pesoPrato * 0.117,
-      'Folhas de louro': pesoPrato * 3
+      'Folhas de louro': pesoPrato * 0.003
     },
-    
+
     'arroz-grega': {
       'Arroz parborizado': pesoPrato * 1.000,
       Alho: pesoPrato * 0.008,
-      Ajisal: pesoPrato * 0.010, 
+      Ajisal: pesoPrato * 0.010,
       Oleo: pesoPrato * 0.150,
-      'Folhas de louro': pesoPrato * 9,
+      'Folhas de louro': pesoPrato * 0.009,
       'Kinorr de frango': pesoPrato * 0.030,
+      mistura: pesoPrato * 0.000,
       Colorau: pesoPrato * 0.003,
-
       Cenoura: pesoPrato * 0.130,
       Cebola: pesoPrato * 0.075,
       Ervilha: pesoPrato * 0.500,
@@ -31,7 +31,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
 
     'feijao-trop': {
       Feijão: pesoPrato * 1.000,
-      'Kinorr de carne': 0.084,
+      'Kinorr de carne': pesoPrato * 0.084,
       Alho: pesoPrato * 0.017,
       Cebola: pesoPrato * 0.118,
       Oleo: pesoPrato * 0.050,
@@ -97,8 +97,8 @@ function compartilharTemperos() {
       title: 'Compartilhar temperos',
       text: `Você precisa de ${quantidadeTempero} gramas de tempero.`
     })
-    .then(() => console.log('Conteúdo compartilhado com sucesso.'))
-    .catch((error) => console.log('Erro ao compartilhar:', error));
+      .then(() => console.log('Conteúdo compartilhado com sucesso.'))
+      .catch((error) => console.log('Erro ao compartilhar:', error));
   } else {
     alert('Compartilhamento não suportado neste dispositivo!!!');
   }
