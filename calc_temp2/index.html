@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
-  <javascript src="main.js"></javascript>
-  <title>Document</title>
+  <script src="main.js"></script>
+  <title>Calculadora do completão</title>
 </head>
 <body>
   <main>
     <h1>Showrrasco</h1>
     <h2>Calculadora de Temperos</h2>
-
-    <h3>Escolha o prato</h3>
     
     <form>
       
@@ -30,12 +28,12 @@
       <label for="peso-prato">Peso do prato</label>
       <input type="number" id="peso-prato" name="peso-prato"><br>
 
-      <button type="button" onclick="exibirResultado()" id="btn">Imgredientes</button>
+      <button type="button" onclick="exibirResultados()" id="btn">Imgredientes</button>
     
     </form>
 
     <div id="resultado"></div>
-    <button type="button" onclick="compartilharTemperos" id="btn-comp">Compartilhar</button>
+    <button type="button" onclick="compartilharTemperos()" id="btn-comp">Compartilhar</button>
 
     <div id="version">
       <h4>Versão: 1.0</h4>

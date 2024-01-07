@@ -7,7 +7,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Alho: pesoPrato * 0.010,
       Ajisal: pesoPrato * 0.025,
       Oleó: pesoPrato * 0.117,
-      'Folhas de louro': pesoPrato * 3.000
+      'Folhas de louro': pesoPrato * 3
     },
     
     'arroz-grega': {
@@ -15,7 +15,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Alho: pesoPrato * 0.008,
       Ajisal: pesoPrato * 0.010, 
       Oleo: pesoPrato * 0.150,
-      'Folhas de louro': pesoPrato * 9.000,
+      'Folhas de louro': pesoPrato * 9,
       'Kinorr de frango': pesoPrato * 0.030,
       Colorau: pesoPrato * 0.003,
 
@@ -29,7 +29,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       'Cheiro-verde': pesoPrato * 0.023
     },
 
-    Tropeiro: {
+    'feijao-trop': {
       Feijão: pesoPrato * 1.000,
       'Kinorr de carne': 0.084,
       Alho: pesoPrato * 0.017,
@@ -44,7 +44,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Farinha: pesoPrato * 0.079
     },
 
-    Farofa: {
+    farofa: {
       Farinha: pesoPrato * 1.000,
       Alho: pesoPrato * 0.015,
       'Kinorr de galinha': pesoPrato * 0.015,
@@ -52,7 +52,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Oleo: pesoPrato * 0.180
     },
 
-    Salpicão: {
+    salpicao: {
       frango: pesoPrato * 1.000,
       Maionese: pesoPrato * 0.780,
       Cenoura: pesoPrato * 0.072,
@@ -60,7 +60,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       'Kinorr de frango': pesoPrato * 0.040
     },
 
-    Maionese: {
+    maionese: {
       Cenoura: pesoPrato * 1.000,
       Batata: pesoPrato * 1.000,
       'Kinorr de frango': pesoPrato * 0.083,
@@ -68,12 +68,11 @@ function calcularTempero(pesoPrato, tipoPrato) {
     }
   };
 
-  return temperos[tipo-Prato];
+  return temperos[tipoPrato];
 
 }
 
 function exibirResultados() {
-
   const pesoPrato = Number(document.getElementById('peso-prato').value);
   const tipoPrato = document.getElementById('tipo-prato').value;
 
@@ -86,16 +85,8 @@ function exibirResultados() {
     listaTemperos += `<li>${tempero}: ${quantidade} gramas</li>`;
   }
 
-  //Exibir os resultados para o usuario
-
-  const resultadosFinal = `<p>Resultado para ${pesoPrato} Kg de ${tipoPrato}:</p><ul>${listaTemperos}</ul>`
+  const resultadosFinal = `<p>Resultado para ${pesoPrato} Kg de ${tipoPrato}:</p><ul>${listaTemperos}</ul>`;
   document.getElementById('resultado').innerHTML = resultadosFinal;
-
-  //Atualize a função de compartilhamento
-  document.getElementById('btn-comp').addEventListener('click', function() {
-    const resultadoCopmpartilhado = `Você precisa dos seguintes temperos para ${pesoPrato} Kg de ${tipoPrato}:\n\n${listaTemperos}`;
-    navigator.share({ text: resultadoCopmpartilhado});
-  });
 }
 
 function compartilharTemperos() {
