@@ -87,7 +87,7 @@ function exibirResultados() {
     listaTemperos += `<li>${tempero}: ${quantidade} gramas</li>`;
   }
 
-  const resultadosFinal = `<p>Resultado para ${pesoPrato} Kg de ${tipoPrato}:</p><ul>${listaTemperos}</ul>`;
+  const resultadosFinal = `<p>Resultado para ${pesoPrato} gramas de ${tipoPrato}:</p><ul>${listaTemperos}</ul>`;
   document.getElementById('resultado').innerHTML = resultadosFinal;
 }
 
