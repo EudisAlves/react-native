@@ -16,6 +16,23 @@ body {
   font-size: large;
 }
 
+#image {
+  width: 180px;
+  height: 200px;
+}
+
+.prato {
+  margin: 15px;
+}
+
+#tipo-prato {
+  margin: 25px;
+}
+
+#peso-prato {
+  margin: 25px;
+}
+
 #peso-carne {
   height: 40px;
   border: 1px solid rgb(1, 119, 30);
@@ -35,8 +52,7 @@ body {
   border-radius: 5px;
   color: black;
   font-size: 15px;
-  background-color: rgb(178, 230, 243);
-  box-shadow: 0 0 58px #fcd706;
+  background-color: rgb(178, 230, 243)
 }
 
 #btn-comp {
