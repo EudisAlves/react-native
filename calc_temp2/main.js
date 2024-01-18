@@ -26,7 +26,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Oleo: pesoPrato * 0.058,
       'Kinorr frango': pesoPrato * 0.012,
       Frango: pesoPrato * 0.247,
-      'Cheiro-verde': pesoPrato * 0.033
+      'Cheiro-verde': pesoPrato * 1/3,
     },
 
     'feijao-trop': {
