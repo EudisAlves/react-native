@@ -6,7 +6,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       'Arroz branco': pesoPrato * 1.000,
       Alho: pesoPrato * 0.010,
       Ajisal: pesoPrato * 0.025,
-      Oleó: pesoPrato * 0.117,
+      Oleó: pesoPrato * 0.095,
       'Folhas de louro': pesoPrato * 0.003
     },
 
@@ -17,16 +17,16 @@ function calcularTempero(pesoPrato, tipoPrato) {
       Oleo: pesoPrato * 0.150,
       'Folhas de louro': pesoPrato * 0.009,
       'Kinorr de frango': pesoPrato * 0.030,
-      MISTURA: pesoPrato * 0.000,
       Colorau: pesoPrato * 0.003,
-      'Cenoura s/ carca': pesoPrato * 0.130,
-      'Cebola s/ carca': pesoPrato * 0.075,
-      'Lata de ervilha': pesoPrato * 0.500,
-      'Lata de milho': pesoPrato * 0.500,
+      MISTURA: pesoPrato * 0.000,
+      'Cenoura s/ carca': pesoPrato * 0.167,
+      'Cebola s/ carca': pesoPrato * 0.150,
+      'Lata de ervilha': pesoPrato * 1.000,
+      'Lata de milho': pesoPrato * 1.000,
       Oleo: pesoPrato * 0.058,
-      'Kinorr de frango': pesoPrato * 0.012,
+      'Kinorr frango': pesoPrato * 0.012,
       Frango: pesoPrato * 0.247,
-      'Cheiro-verde': pesoPrato * 0.023
+      'Cheiro-verde': pesoPrato * 0.033
     },
 
     'feijao-trop': {
@@ -37,7 +37,7 @@ function calcularTempero(pesoPrato, tipoPrato) {
       'Cebola s/ casca': pesoPrato * 0.118,
       Oleo: pesoPrato * 0.050,
       MISTURA: pesoPrato * 0.000,
-      Bacon: pesoPrato * 0.117,
+      Bacon: pesoPrato * 0.032,
       Linguicinha: pesoPrato * 0.032,
       Calabresa: pesoPrato * 0.188,
       Ovo: pesoPrato * 3.000,
@@ -57,8 +57,8 @@ function calcularTempero(pesoPrato, tipoPrato) {
     salpicao: {
       frango: pesoPrato * 1.000,
       Maionese: pesoPrato * 0.780,
-      Cenoura: pesoPrato * 0.072,
-      'Batata-palha': pesoPrato * 0.063,
+      Cenoura: pesoPrato * 0.135,
+      'Batata-palha': pesoPrato * 0.102,
       'Kinorr de frango': pesoPrato * 0.040
     },
 
